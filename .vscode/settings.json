@@ -1,0 +1,5 @@
+{
+    "java.configuration.updateBuildConfiguration": "interactive",
+    "maven.view": "flat",
+    "maven.executable.path": "E:\\Program Files\\apache-maven-3.9.11\\bin\\mvn.cmd"
+}

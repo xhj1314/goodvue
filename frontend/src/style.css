@@ -1,0 +1,241 @@
+/* ═══════════════════════════════════════════════════════════════
+   全局样式 — 新闻管理系统（二次元风格）
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── 基础重置 ─────────────────────────────────── */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+               'Helvetica Neue', Arial, 'Noto Sans SC', sans-serif;
+  /* 二次元渐变背景：粉紫蓝梦幻色 */
+  background: linear-gradient(135deg, #fce4ec 0%, #f3e5f5 25%, #e8eaf6 50%, #e1f5fe 75%, #fce4ec 100%);
+  background-attachment: fixed;
+  color: #333;
+  min-height: 100vh;
+}
+
+#app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── 通用卡片 — 二次元毛玻璃 + 柔和阴影 ────── */
+.card {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 20px;
+  box-shadow: 0 4px 24px rgba(206, 147, 216, 0.08), 0 1px 4px rgba(0, 0, 0, 0.03);
+  padding: 32px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 8px 36px rgba(206, 147, 216, 0.14), 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* ── 页面容器 ─────────────────────────────────── */
+.page-container {
+  max-width: 860px;
+  margin: 40px auto;
+  padding: 0 16px;
+  flex: 1;
+  position: relative;
+  /* 入场动画 */
+  animation: fadeInUp 0.5s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── 按钮 — 二次元渐变 + 涟漪动效 ───────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 按钮涟漪效果 */
+.btn::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: translate(-50%, -50%);
+  transition: width 0.4s, height 0.4s;
+}
+
+.btn:active::after {
+  width: 200px;
+  height: 200px;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.btn:active {
+  transform: translateY(0) scale(0.97);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+/* 主按钮 — 二次元紫粉渐变 */
+.btn-primary {
+  background: linear-gradient(135deg, #ce93d8 0%, #f8bbd0 50%, #90caf9 100%);
+  color: #fff;
+  box-shadow: 0 2px 10px rgba(206, 147, 216, 0.35);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary:hover {
+  box-shadow: 0 6px 20px rgba(206, 147, 216, 0.45);
+}
+
+/* 默认按钮 — 二次元浅紫 */
+.btn-default {
+  background: linear-gradient(135deg, #f3e5f5, #e8eaf6);
+  color: #5c6bc0;
+  border: 1px solid #d1c4e9;
+}
+
+.btn-default:hover {
+  background: linear-gradient(135deg, #ede7f6, #e8eaf6);
+  border-color: #b39ddb;
+}
+
+/* 危险按钮 — 二次元粉红 */
+.btn-danger {
+  background: linear-gradient(135deg, #f48fb1 0%, #f06292 100%);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(244, 143, 177, 0.35);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.btn-danger:hover {
+  box-shadow: 0 6px 20px rgba(244, 143, 177, 0.45);
+}
+
+/* ── 表单 — 二次元聚焦动画 ───────────────────── */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  font-size: 13px;
+  color: #7b1fa2;
+  margin-bottom: 8px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 11px 16px;
+  border: 2px solid #e1bee7;
+  border-radius: 12px;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.form-input:focus {
+  border-color: #ce93d8;
+  box-shadow: 0 0 0 4px rgba(206, 147, 216, 0.12);
+  background: #fff;
+}
+
+.form-input::placeholder {
+  color: #ce93d8;
+  opacity: 0.5;
+}
+
+/* ── 提示文字 — 二次元风格 ───────────────────── */
+.tip-success {
+  color: #2e7d32;
+  font-size: 13px;
+  margin-top: 10px;
+  padding: 8px 12px;
+  background: linear-gradient(135deg, #e8f5e9, #f1f8e9);
+  border-radius: 10px;
+  border-left: 3px solid #66bb6a;
+  animation: tipFadeIn 0.3s ease;
+}
+
+.tip-error {
+  color: #c62828;
+  font-size: 13px;
+  margin-top: 10px;
+  padding: 8px 12px;
+  background: linear-gradient(135deg, #fce4ec, #ffebee);
+  border-radius: 10px;
+  border-left: 3px solid #f48fb1;
+  animation: tipFadeIn 0.3s ease;
+}
+
+@keyframes tipFadeIn {
+  from { opacity: 0; transform: translateX(-8px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+/* ── 滚动条美化 — 二次元粉色 ────────────────── */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(243, 229, 245, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #f8bbd0, #ce93d8);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #f48fb1, #ba68c8);
+}
+
+/* ── 文字选中颜色 — 二次元粉色 ──────────────── */
+::selection {
+  background: rgba(206, 147, 216, 0.25);
+  color: #4a148c;
+}

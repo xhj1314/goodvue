@@ -1,0 +1,14 @@
+e:\2\news-system\backend\src\main\java\com\news\config\SecurityConfig.java
+e:\2\news-system\backend\src\main\java\com\news\controller\AdminController.java
+e:\2\news-system\backend\src\main\java\com\news\controller\NewsController.java
+e:\2\news-system\backend\src\main\java\com\news\controller\UserController.java
+e:\2\news-system\backend\src\main\java\com\news\dto\LoginRequest.java
+e:\2\news-system\backend\src\main\java\com\news\dto\NewsRequest.java
+e:\2\news-system\backend\src\main\java\com\news\dto\RegisterRequest.java
+e:\2\news-system\backend\src\main\java\com\news\entity\News.java
+e:\2\news-system\backend\src\main\java\com\news\entity\User.java
+e:\2\news-system\backend\src\main\java\com\news\NewsApplication.java
+e:\2\news-system\backend\src\main\java\com\news\repository\NewsRepository.java
+e:\2\news-system\backend\src\main\java\com\news\repository\UserRepository.java
+e:\2\news-system\backend\src\main\java\com\news\service\NewsService.java
+e:\2\news-system\backend\src\main\java\com\news\service\UserService.java
